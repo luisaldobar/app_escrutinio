@@ -16,8 +16,8 @@ class ControladorCandidato():
          print("Crear un candidato")
          elCandidato = Candidato(infoCandidato)
          return elCandidato.__dict__
-    def show(self, id):
-        print("Mostrando un candidato con id ", id)
+    def show(self, cedula):
+        print("Mostrando un candidato con cedula ", id)
         elCandidato = {
             "cedula": "10100100",
              "numero_resolucion": "250 de 2022",
