@@ -5,7 +5,7 @@ class ControladorPermiso():
     def index(self):
          print("Listar todos los permisos")
          unPermiso = {
-             "id": "10",
+             "id": 10,
              "url": "http://127.0.0.1:8080",
              "metodo": "Get"
 
@@ -17,8 +17,8 @@ class ControladorPermiso():
          return elPermiso.__dict__
     def show(self, id):
         print("Mostrando un permiso con id ", id)
-        elUsuario = {
-            "id": "10",
+        elPermiso = {
+            "id": 10,
              "url": "http://127.0.0.1:8080",
              "metodo": "Get"
         }

@@ -4,6 +4,7 @@ from flask import request
 from flask_cors import CORS
 import json
 from waitress import serve
+import requests
 
 app = Flask(__name__)
 cors = CORS(app)
@@ -63,11 +64,12 @@ def getMesas():
     json=miControladorMesa.index()
     return jsonify(json)
 
-@app.route("/mesa",methods=['POST'])
+@app.route("/mesas",methods=['POST'])
 def crearMesa():
     data = request.get_json()
     json=miControladorMesa.create(data)
     return jsonify(json)
+
 @app.route("/mesas/<string:id>",methods=['GET'])
 def getMesa(id):
     json=miControladorMesa.show(id)
@@ -117,7 +119,7 @@ def getPartidos():
     json=miControladorPartido.index()
     return jsonify(json)
 
-@app.route("/partido",methods=['POST'])
+@app.route("/partidos",methods=['POST'])
 def crearPartido():
     data = request.get_json()
     json=miControladorPartido.create(data)
@@ -196,7 +198,7 @@ def getResultados():
     json=miControladorResultado.index()
     return jsonify(json)
 
-@app.route("/usuarios",methods=['POST'])
+@app.route("/resultados",methods=['POST'])
 def crearResultado():
     data = request.get_json()
     json=miControladorResultado.create(data)
@@ -216,7 +218,7 @@ def eliminarResultado(id):
     json=miControladorResultado.delete(id)
     return jsonify(json)
 
-#=========  Fin Roles  ===============
+#=========  Servicio Roles  ===============
 
 @app.route("/roles",methods=['GET'])
 def getRoles():

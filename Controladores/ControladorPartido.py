@@ -5,7 +5,7 @@ class ControladorPartido():
     def index(self):
          print("Listar todos los partidos")
          unPartido = {
-             "id": "A2020",
+             "id": "A2022",
              "nombre": "porColombia",
              "lema": "paz y libertad"
 
@@ -18,7 +18,7 @@ class ControladorPartido():
     def show(self, id):
         print("Mostrando un partido con id ", id)
         elPartido = {
-            "id": "A2020",
+            "id": "A2022",
              "nombre": "porColombia",
              "lema": "paz y libertad"
         }
