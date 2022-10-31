@@ -1,4 +1,7 @@
 {
    "url-backend": "127.0.0.1",
-   "port": 8080
+   "port": 8080,
+
+  "data-db-connection": "mongodb+srv://luisaldobar:Fcd1923*@cluster0.4mvp2zt.mongodb.net/?retryWrites=true&w=majority",
+  "name-db": "bd-Registraduria"
 }
