@@ -5,6 +5,19 @@ from flask_cors import CORS
 import json
 from waitress import serve
 import requests
+import pymongo
+import certifi
+#=========Base de datos=======
+ca = certifi.where()
+#client = pymongo.MongoClient("mongodb+srv://luisaldobar:Fcd1923*@cluster0.qfgmf.mongodb.net/bd-Registraduria?retryWrites=true&w=majority",tlsCAFile=ca)
+client = pymongo.MongoClient("mongodb+srv://luisaldobar:Fcd1923*@cluster0.4mvp2zt.mongodb.net/?retryWrites=true&w=majority")
+db = client.test
+db = client.tested
+print(db)
+
+baseDatos = client["bd-Registraduria"]
+print(baseDatos.list_collection_names())
+#=============================
 
 app = Flask(__name__)
 cors = CORS(app)
