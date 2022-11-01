@@ -9,6 +9,10 @@ T = TypeVar('T')
 
 class InterfaceRepositorio(Generic[T]):
     def __init__(self):
+        """
+
+        :rtype: object
+        """
         ca = certifi.where()
         dataConfig = self.loadFileConfig()
         client = pymongo.MongoClient(dataConfig["data-db-connection"], tlsCAFile=ca)
