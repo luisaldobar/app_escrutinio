@@ -9,9 +9,7 @@ T = TypeVar('T')
 
 class InterfaceRepositorio(Generic[T]):
     def __init__(self):
-        """
-
-        :rtype: object
+        """       :rtype: object
         """
         ca = certifi.where()
         dataConfig = self.loadFileConfig()
